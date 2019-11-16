@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t konrad/multi-docker -f Dockerfile.dev ./client 
+  - docker build -t konrad/multi-docker -f ./client/Dockerfile.dev ./client 
 
 script:
   - docker run -e CI=true konrad/multi-docker npm run test
